@@ -809,6 +809,101 @@
       margin: 0 auto;
     }
 
+    /* ===== TRABALHE CONOSCO ===== */
+    .work-section {
+      margin: var(--spacing-16) 0;
+    }
+
+    .work-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: var(--spacing-6);
+      margin-top: var(--spacing-8);
+    }
+
+    .work-card {
+      background: white;
+      border-radius: var(--radius-2xl);
+      padding: var(--spacing-8);
+      box-shadow: var(--shadow-lg);
+      text-align: center;
+      transition: var(--transition-bounce);
+      border: 1px solid var(--secondary-100);
+    }
+
+    .work-card:hover {
+      transform: translateY(-10px);
+      box-shadow: var(--shadow-2xl);
+    }
+
+    .work-icon {
+      width: 80px;
+      height: 80px;
+      background: var(--gradient-primary);
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin: 0 auto var(--spacing-5);
+      color: white;
+      font-size: 2rem;
+    }
+
+    .work-card h3 {
+      font-size: 1.8rem;
+      margin-bottom: var(--spacing-2);
+    }
+
+    .work-card h4 {
+      font-size: 2.5rem;
+      color: var(--primary-600);
+      margin-bottom: var(--spacing-4);
+    }
+
+    .work-card p {
+      color: var(--secondary-600);
+      margin-bottom: var(--spacing-6);
+    }
+
+    .work-badge {
+      display: inline-block;
+      background: var(--success-light);
+      color: var(--success);
+      padding: var(--spacing-2) var(--spacing-4);
+      border-radius: var(--radius-full);
+      font-weight: 600;
+      font-size: 1.1rem;
+      margin-bottom: var(--spacing-4);
+    }
+
+    .work-profit {
+      font-size: 2rem;
+      font-weight: 800;
+      color: var(--primary-600);
+      margin: var(--spacing-4) 0;
+    }
+
+    .work-profit small {
+      font-size: 1rem;
+      color: var(--secondary-500);
+    }
+
+    .btn-work {
+      display: block;
+      background: var(--gradient-primary);
+      color: white;
+      padding: var(--spacing-4);
+      border-radius: var(--radius-full);
+      font-weight: 600;
+      margin-top: var(--spacing-4);
+      transition: var(--transition-bounce);
+    }
+
+    .btn-work:hover {
+      transform: scale(1.05);
+      box-shadow: var(--shadow-primary);
+    }
+
     /* ===== DOWNLOAD TABS ===== */
     .download-section {
       margin: var(--spacing-16) 0;
@@ -918,6 +1013,105 @@
 
     .download-feature i {
       color: var(--success);
+    }
+
+    /* ===== ATIVAÇÃO DE PLAYERS ===== */
+    .activation-section {
+      margin: var(--spacing-16) 0;
+      background: var(--gradient-dark);
+      border-radius: var(--radius-3xl);
+      padding: var(--spacing-10);
+      color: white;
+    }
+
+    .activation-section .section-title,
+    .activation-section .section-description {
+      color: white;
+    }
+
+    .player-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+      gap: var(--spacing-4);
+      margin: var(--spacing-8) 0;
+    }
+
+    .player-card {
+      background: rgba(255, 255, 255, 0.1);
+      border: 2px solid rgba(255, 255, 255, 0.2);
+      border-radius: var(--radius-lg);
+      padding: var(--spacing-4);
+      text-align: center;
+      cursor: pointer;
+      transition: var(--transition-bounce);
+    }
+
+    .player-card:hover {
+      background: rgba(255, 255, 255, 0.2);
+      transform: scale(1.05);
+      border-color: var(--primary-400);
+    }
+
+    .player-card.selected {
+      background: var(--gradient-primary);
+      border-color: white;
+      transform: scale(1.05);
+    }
+
+    .player-card i {
+      font-size: 2rem;
+      margin-bottom: var(--spacing-2);
+      color: var(--primary-300);
+    }
+
+    .player-card span {
+      font-weight: 600;
+    }
+
+    .activation-form {
+      background: white;
+      border-radius: var(--radius-2xl);
+      padding: var(--spacing-8);
+      margin-top: var(--spacing-8);
+      color: var(--secondary-900);
+    }
+
+    .activation-form h3 {
+      font-size: 1.8rem;
+      margin-bottom: var(--spacing-6);
+      text-align: center;
+    }
+
+    .activation-note {
+      background: var(--warning-light);
+      color: var(--warning);
+      padding: var(--spacing-3) var(--spacing-4);
+      border-radius: var(--radius-lg);
+      margin-bottom: var(--spacing-6);
+      font-weight: 500;
+      display: flex;
+      align-items: center;
+      gap: var(--spacing-2);
+    }
+
+    .activation-note i {
+      font-size: 1.2rem;
+    }
+
+    .btn-activation {
+      background: var(--gradient-whatsapp);
+      color: white;
+      padding: var(--spacing-4);
+      border-radius: var(--radius-full);
+      font-weight: 600;
+      width: 100%;
+      margin-top: var(--spacing-6);
+      transition: var(--transition-bounce);
+    }
+
+    .btn-activation:hover {
+      transform: scale(1.02);
+      box-shadow: var(--shadow-whatsapp);
     }
 
     /* ===== PLANOS GRID ===== */
@@ -1368,7 +1562,7 @@
       font-size: 0.95rem;
     }
 
-    .form-group input {
+    .form-group input, .form-group select {
       padding: var(--spacing-4) var(--spacing-4);
       border: 2px solid var(--secondary-200);
       border-radius: var(--radius-lg);
@@ -1377,13 +1571,13 @@
       font-family: inherit;
     }
 
-    .form-group input:focus {
+    .form-group input:focus, .form-group select:focus {
       outline: none;
       border-color: var(--primary-500);
       box-shadow: 0 0 0 4px var(--primary-100);
     }
 
-    .form-group input.error {
+    .form-group input.error, .form-group select.error {
       border-color: var(--danger);
       background: var(--danger-light);
     }
@@ -2060,6 +2254,7 @@
       <li><a href="#home"><i class="fas fa-home"></i> Início</a></li>
       <li><a href="#planos"><i class="fas fa-film"></i> Planos</a></li>
       <li><a href="#download"><i class="fas fa-download"></i> Download</a></li>
+      <li><a href="#trabalhe"><i class="fas fa-briefcase"></i> Trabalhe Conosco</a></li>
       <li><a href="#depoimentos"><i class="fas fa-star"></i> Depoimentos</a></li>
       <li><a href="#contato"><i class="fas fa-envelope"></i> Contato</a></li>
     </ul>
@@ -2093,6 +2288,7 @@
         <a href="#home" class="nav-link">Início</a>
         <a href="#planos" class="nav-link">Planos</a>
         <a href="#download" class="nav-link">Download</a>
+        <a href="#trabalhe" class="nav-link">Trabalhe Conosco</a>
         <a href="#depoimentos" class="nav-link">Depoimentos</a>
         <a href="#contato" class="nav-link">Contato</a>
       </nav>
@@ -2124,9 +2320,9 @@
           <p>Tenha acesso às principais plataformas de streaming com um plano único, prático e econômico. Mais de 2000 canais em 4K.</p>
           
           <div class="hero-actions">
-            <button class="btn btn-primary btn-lg" id="openTesteModal">
+            <a href="https://firez.appm.live/t/d22fa4f2-1fde-4569-b57d-1e143ec66873" target="_blank" class="btn btn-primary btn-lg">
               <i class="fas fa-calendar-check"></i> TESTE GRÁTIS
-            </button>
+            </a>
             
             <a href="#planos" class="btn btn-outline btn-lg">
               <i class="fas fa-chevron-down"></i> VER PLANOS
@@ -2233,49 +2429,157 @@
       </div>
     </section>
 
-    <!-- DOWNLOAD ANDROID -->
+    <!-- TRABALHE CONOSCO -->
+    <section class="container work-section" id="trabalhe">
+      <div class="section-header">
+        <div class="section-subtitle">TRABALHE CONOSCO</div>
+        <h2 class="section-title">Ganhe até 300% trabalhando poucas horas por dia</h2>
+        <p class="section-description">Seja nosso revendedor e comece a lucrar hoje mesmo</p>
+      </div>
+
+      <div class="work-grid">
+        <div class="work-card">
+          <div class="work-icon">
+            <i class="fas fa-rocket"></i>
+          </div>
+          <h3>Plano Inicial</h3>
+          <h4>R$ 100/mês</h4>
+          <div class="work-profit">
+            R$ 260 <small>lucro</small>
+          </div>
+          <p>Lucro de 260% sobre o investimento</p>
+          <a href="https://firez.appm.live/r/d22fa4f2-1fde-4569-b57d-1e143ec66873" target="_blank" class="btn-work">
+            <i class="fas fa-hand-holding-usd"></i> SEJA REVENDEDOR
+          </a>
+        </div>
+
+        <div class="work-card">
+          <div class="work-icon">
+            <i class="fas fa-crown"></i>
+          </div>
+          <h3>Plano Básico</h3>
+          <h4>R$ 200/mês</h4>
+          <div class="work-profit">
+            R$ 520 <small>lucro</small>
+          </div>
+          <p>Lucro de 260% sobre o investimento</p>
+          <a href="https://firez.appm.live/r/d22fa4f2-1fde-4569-b57d-1e143ec66873" target="_blank" class="btn-work">
+            <i class="fas fa-hand-holding-usd"></i> SEJA REVENDEDOR
+          </a>
+        </div>
+
+        <div class="work-card">
+          <div class="work-icon">
+            <i class="fas fa-star"></i>
+          </div>
+          <h3>Plano Premium</h3>
+          <h4>R$ 300/mês</h4>
+          <div class="work-profit">
+            R$ 900 <small>lucro</small>
+          </div>
+          <p>Lucro de 300% sobre o investimento</p>
+          <a href="https://firez.appm.live/r/d22fa4f2-1fde-4569-b57d-1e143ec66873" target="_blank" class="btn-work">
+            <i class="fas fa-hand-holding-usd"></i> SEJA REVENDEDOR
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- DOWNLOAD APLICATIVOS -->
     <section class="container download-section" id="download">
       <div class="section-header">
-        <div class="section-subtitle">ANDROID</div>
-        <h2 class="section-title">Baixe nosso aplicativo</h2>
-        <p class="section-description">Acesse de qualquer lugar direto do seu celular</p>
+        <div class="section-subtitle">APLICATIVOS</div>
+        <h2 class="section-title">Baixe nossos apps</h2>
+        <p class="section-description">Escolha o player ideal para seu dispositivo</p>
       </div>
 
       <div class="download-tabs">
-        <a href="https://abre.ai/oLLx" class="download-tab active" data-apk="ibo">
-          <i class="fas fa-download"></i> IBO Player Pro (Paga Ativação)
+        <a href="http://aftv.news/8526292" target="_blank" class="download-tab active" data-apk="ibo">
+          <i class="fas fa-download"></i> IBO Android
         </a>
-        <a href="https://abre.ai/oLR7" class="download-tab" data-apk="xc">
-          <i class="fas fa-download"></i> Megga Pro (PRO ATIVAÇAO GRATIS)
+        <a href="https://abre.ai/firezsmarters" target="_blank" class="download-tab" data-apk="smarters">
+          <i class="fas fa-download"></i> SMARTERS Android
         </a>
-       <a href="https://wa.me/5516993830355" target="_blank" class="social-btn instagram">
-        <i class="fab fa-instagram">Ativação de Apps</i>
-      </a>
+        <a href="https://abre.ai/firezv3" target="_blank" class="download-tab" data-apk="v3">
+          <i class="fas fa-download"></i> V3 Android
+        </a>
+      </div>
+    </section>
+
+    <!-- ATIVAÇÃO DE PLAYERS -->
+    <section class="container activation-section">
+      <div class="section-header">
+        <div class="section-subtitle">ATIVAÇÃO DE PLAYERS</div>
+        <h2 class="section-title">Ative seu player favorito</h2>
+        <p class="section-description">Selecione o player e preencha os dados para ativação</p>
       </div>
 
-      <div class="download-info" id="downloadInfo">
-        <div class="download-version">
-          <i class="fas fa-check-circle"></i> Versão 4.2.1 - Atualizado em 2025
+      <div class="player-grid">
+        <div class="player-card" data-player="Assist Plus">
+          <i class="fas fa-play-circle"></i>
+          <span>ASSIST PLUS</span>
         </div>
-        
-        <div class="download-features">
-          <span class="download-feature">
-            <i class="fas fa-check"></i> 4K HDR
-          </span>
-          <span class="download-feature">
-            <i class="fas fa-check"></i> Multi-telas
-          </span>
-          <span class="download-feature">
-            <i class="fas fa-check"></i> EPG completo
-          </span>
-          <span class="download-feature">
-            <i class="fas fa-check"></i> Gravação
-          </span>
+        <div class="player-card" data-player="Hot IPTV Player">
+          <i class="fas fa-fire"></i>
+          <span>HOT IPTV PLAYER</span>
         </div>
+        <div class="player-card" data-player="Hot IPTV Player 2">
+          <i class="fas fa-fire"></i>
+          <span>HOT IPTV PLAYER 2</span>
+        </div>
+        <div class="player-card" data-player="Ninja Player">
+          <i class="fas fa-user-ninja"></i>
+          <span>NINJA PLAYER</span>
+        </div>
+        <div class="player-card" data-player="Meta Player">
+          <i class="fas fa-meteor"></i>
+          <span>META PLAYER</span>
+        </div>
+        <div class="player-card" data-player="SmartOne">
+          <i class="fas fa-mobile-alt"></i>
+          <span>SMARTONE</span>
+        </div>
+        <div class="player-card" data-player="Vizzion Play">
+          <i class="fas fa-tv"></i>
+          <span>VIZZION PLAY</span>
+        </div>
+      </div>
+
+      <div class="activation-form" id="activationForm">
+        <h3>Ativação de Player</h3>
         
-        <p style="margin-top: var(--spacing-6);">
-          <i class="fas fa-shield-alt" style="color: var(--success);"></i> 100% seguro - sem vírus
-        </p>
+        <div class="activation-note">
+          <i class="fas fa-exclamation-triangle"></i>
+          <span>Qualquer erro de digitação será necessário pagar outra ativação</span>
+        </div>
+
+        <div class="form-group">
+          <label>Player Selecionado</label>
+          <input type="text" id="selectedPlayer" value="Assist Plus" readonly>
+        </div>
+
+        <div class="form-group">
+          <label for="macAddress">MAC Address</label>
+          <input type="text" id="macAddress" placeholder="Ex: 00:1A:2B:3C:4D:5E" maxlength="17">
+          <div class="form-error" id="macError"></div>
+          <small style="color: var(--secondary-400);">Formato como aparece na sua TV</small>
+        </div>
+
+        <div class="form-group">
+          <label for="deviceInfo">Device (Dispositivo)</label>
+          <input type="text" id="deviceInfo" placeholder="Ex: TV LG, Amazon Fire Stick, Celular">
+          <div class="form-error" id="deviceError"></div>
+          <small style="color: var(--secondary-400);">Como aparece em sua TV</small>
+        </div>
+
+        <div class="form-group">
+          <label for="activationName">Nome para ativação</label>
+          <input type="text" id="activationName" placeholder="Seu nome">
+        </div>
+
+        <button class="btn-activation" id="sendActivation">
+          <i class="fab fa-whatsapp"></i> Enviar para WhatsApp
+        </button>
       </div>
     </section>
 
@@ -2297,7 +2601,7 @@
           </div>
           
           <ul class="plano-recurso">
-            <li><i class="fas fa-check-circle"></i> 1 tela </li>
+            <li><i class="fas fa-check-circle"></i> 1 tela</li>
             <li><i class="fas fa-check-circle"></i> Qualidade 720p</li>
             <li><i class="fas fa-check-circle"></i> Streaming + Canais</li>
             <li><i class="fas fa-check-circle"></i> Suporte padrão</li>
@@ -2317,7 +2621,7 @@
           </div>
           
           <ul class="plano-recurso">
-            <li><i class="fas fa-check-circle"></i> 1 tela </li>
+            <li><i class="fas fa-check-circle"></i> 1 tela</li>
             <li><i class="fas fa-check-circle"></i> Qualidade Full HD</li>
             <li><i class="fas fa-check-circle"></i> Streaming + Canais</li>
             <li><i class="fas fa-check-circle"></i> Suporte prioritário</li>
@@ -2336,7 +2640,7 @@
           </div>
           
           <ul class="plano-recurso">
-            <li><i class="fas fa-check-circle"></i> 1 tela </li>
+            <li><i class="fas fa-check-circle"></i> 1 tela</li>
             <li><i class="fas fa-check-circle"></i> Qualidade 4K HDR</li>
             <li><i class="fas fa-check-circle"></i> Streaming + Canais</li>
             <li><i class="fas fa-check-circle"></i> Suporte VIP 24/7</li>
@@ -2355,7 +2659,7 @@
           </div>
           
           <ul class="plano-recurso">
-            <li><i class="fas fa-check-circle"></i> 1 tela </li>
+            <li><i class="fas fa-check-circle"></i> 1 tela</li>
             <li><i class="fas fa-check-circle"></i> Qualidade 4K HDR+</li>
             <li><i class="fas fa-check-circle"></i> Todos os Streamings</li>
             <li><i class="fas fa-check-circle"></i> Suporte VIP 24/7</li>
@@ -2453,9 +2757,9 @@
         <p style="font-size: 1.2rem; margin-bottom: var(--spacing-8); opacity: 0.9;">Mais de 10.000 famílias já escolheram Stream Pro</p>
         
         <div style="display: flex; justify-content: center; gap: var(--spacing-4); flex-wrap: wrap;">
-          <button class="btn btn-primary btn-lg" id="openTesteModal2">
+          <a href="https://firez.appm.live/t/d22fa4f2-1fde-4569-b57d-1e143ec66873" target="_blank" class="btn btn-primary btn-lg">
             <i class="fas fa-calendar-check"></i> TESTE GRÁTIS
-          </button>
+          </a>
           
           <a href="#planos" class="btn" style="background: white; color: var(--primary-700);">
             <i class="fas fa-chevron-down"></i> VER PLANOS
@@ -2501,6 +2805,7 @@
             <li><a href="#home"><i class="fas fa-chevron-right"></i> Início</a></li>
             <li><a href="#planos"><i class="fas fa-chevron-right"></i> Planos</a></li>
             <li><a href="#download"><i class="fas fa-chevron-right"></i> Download</a></li>
+            <li><a href="#trabalhe"><i class="fas fa-chevron-right"></i> Trabalhe Conosco</a></li>
             <li><a href="#depoimentos"><i class="fas fa-chevron-right"></i> Depoimentos</a></li>
             <li><a href="#contato"><i class="fas fa-chevron-right"></i> Contato</a></li>
           </ul>
@@ -2535,7 +2840,154 @@
     </div>
   </footer>
 
-  <!-- JAVASCRIPT AVANÇADO -->
+  <!-- BOTÃO DE INSTALAÇÃO PWA -->
+  <button id="installApp" style="position: fixed; bottom: 120px; right: 30px; background: var(--gradient-primary); color: white; border: none; border-radius: var(--radius-full); padding: 12px 24px; font-weight: 600; box-shadow: var(--shadow-lg); display: none; align-items: center; gap: 8px; z-index: 99; cursor: pointer;">
+    <i class="fas fa-download"></i> Instalar App
+  </button>
+
+  <!-- BOTÃO DARK MODE (OPCIONAL) -->
+  <button id="darkModeToggle" style="position: fixed; bottom: 120px; left: 30px; background: var(--secondary-900); color: white; border: none; border-radius: 50%; width: 50px; height: 50px; font-size: 1.2rem; box-shadow: var(--shadow-lg); display: flex; align-items: center; justify-content: center; z-index: 99; cursor: pointer;">
+    <i class="fas fa-moon"></i>
+  </button>
+
+  <style>
+    /* ===== DARK MODE ===== */
+    body.dark-mode {
+      background: var(--secondary-900);
+      color: var(--secondary-100);
+    }
+
+    body.dark-mode .header {
+      background: rgba(15, 23, 42, 0.8);
+      border-bottom-color: rgba(255,255,255,0.05);
+    }
+
+    body.dark-mode .logo-text h1 {
+      background: linear-gradient(135deg, white, var(--primary-300));
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+
+    body.dark-mode .plano-card,
+    body.dark-mode .testimonials,
+    body.dark-mode .download-info,
+    body.dark-mode .stream-icons,
+    body.dark-mode .work-card {
+      background: var(--secondary-800);
+      border-color: var(--secondary-700);
+    }
+
+    body.dark-mode .plano-card.popular {
+      background: linear-gradient(var(--secondary-800), var(--secondary-700));
+    }
+
+    body.dark-mode .testimonial-card {
+      background: var(--secondary-700);
+    }
+
+    body.dark-mode .footer {
+      background: var(--secondary-950);
+    }
+
+    body.dark-mode .activation-form {
+      background: var(--secondary-800);
+      color: white;
+    }
+
+    /* ===== CUSTOM TOOLTIP ===== */
+    .custom-tooltip {
+      position: fixed;
+      background: var(--secondary-900);
+      color: white;
+      padding: 8px 12px;
+      border-radius: var(--radius-md);
+      font-size: 0.85rem;
+      z-index: 1000;
+      pointer-events: none;
+      box-shadow: var(--shadow-lg);
+    }
+
+    .custom-tooltip::after {
+      content: '';
+      position: absolute;
+      bottom: -5px;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 0;
+      height: 0;
+      border-left: 5px solid transparent;
+      border-right: 5px solid transparent;
+      border-top: 5px solid var(--secondary-900);
+    }
+
+    /* ===== ANIMAÇÕES ADICIONAIS ===== */
+    .fade-in {
+      animation: fadeIn 0.8s ease forwards;
+    }
+
+    @keyframes fadeIn {
+      from {
+        opacity: 0;
+        transform: translateY(20px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    /* ===== LOADING STATES ===== */
+    .loading-skeleton {
+      background: linear-gradient(90deg, var(--secondary-200) 25%, var(--secondary-300) 50%, var(--secondary-200) 75%);
+      background-size: 200% 100%;
+      animation: loading 1.5s infinite;
+    }
+
+    @keyframes loading {
+      0% { background-position: 200% 0; }
+      100% { background-position: -200% 0; }
+    }
+
+    /* ===== RESPONSIVIDADE EXTRA ===== */
+    @media (max-width: 768px) {
+      #installApp,
+      #darkModeToggle {
+        bottom: 100px;
+        width: 45px;
+        height: 45px;
+        font-size: 1rem;
+        padding: 0;
+      }
+      
+      #installApp {
+        width: auto;
+        padding: 10px 20px;
+        right: 20px;
+      }
+      
+      #darkModeToggle {
+        left: 20px;
+      }
+    }
+
+    @media (max-width: 480px) {
+      #installApp span {
+        display: none;
+      }
+      
+      #installApp {
+        width: 45px;
+        height: 45px;
+        padding: 0;
+        justify-content: center;
+      }
+      
+      #installApp i {
+        margin: 0;
+      }
+    }
+  </style>
+
   <script>
     (function() {
       'use strict';
@@ -2553,10 +3005,6 @@
       const DOM = {
         loader: document.getElementById('loader'),
         header: document.getElementById('header'),
-        modal: document.getElementById('testeModal'),
-        openModalBtns: document.querySelectorAll('#openTesteModal, #openTesteModal2'),
-        closeModalBtn: document.getElementById('closeModal'),
-        testeForm: document.getElementById('testeForm'),
         toast: document.getElementById('toast'),
         toastTitle: document.getElementById('toastTitle'),
         toastMessage: document.getElementById('toastMessage'),
@@ -2565,7 +3013,6 @@
         whatsappFloat: document.getElementById('whatsappFloat'),
         statNumbers: document.querySelectorAll('.stat-number'),
         downloadTabs: document.querySelectorAll('.download-tab'),
-        downloadInfo: document.getElementById('downloadInfo'),
         planoCards: document.querySelectorAll('.plano-card'),
         streamItems: document.querySelectorAll('.stream-item'),
         mobileMenu: document.getElementById('mobileMenu'),
@@ -2573,7 +3020,13 @@
         closeMobileMenuBtn: document.getElementById('closeMobileMenu'),
         mobileMenuOverlay: document.getElementById('mobileMenuOverlay'),
         mobileMenuLinks: document.querySelectorAll('.mobile-menu-links a'),
-        navLinks: document.querySelectorAll('.nav-link')
+        navLinks: document.querySelectorAll('.nav-link'),
+        playerCards: document.querySelectorAll('.player-card'),
+        selectedPlayer: document.getElementById('selectedPlayer'),
+        macAddress: document.getElementById('macAddress'),
+        deviceInfo: document.getElementById('deviceInfo'),
+        activationName: document.getElementById('activationName'),
+        sendActivation: document.getElementById('sendActivation')
       };
 
       // ===== UTILITÁRIOS =====
@@ -2653,31 +3106,35 @@
           }
 
           requestAnimationFrame(animation);
+        },
+
+        formatMAC(value) {
+          let v = value.replace(/\W/g, '').toUpperCase().substring(0, 12);
+          let parts = [];
+          for (let i = 0; i < v.length; i += 2) {
+            parts.push(v.substr(i, 2));
+          }
+          return parts.length ? parts.join(':') : value;
         }
       };
 
       // ===== INICIALIZAÇÃO =====
-      // Mostrar loader inicialmente
       DOM.loader.style.display = 'flex';
       document.body.classList.add('no-scroll');
 
-      // Esconder loader após a página carregar completamente
       window.addEventListener('load', function() {
         setTimeout(function() {
           DOM.loader.classList.add('hidden');
           document.body.classList.remove('no-scroll');
           
-          // Pequeno atraso para garantir a transição
           setTimeout(function() {
             DOM.loader.style.display = 'none';
           }, 500);
           
-          // Mostrar toast de boas-vindas
           Utils.showToast('Bem-vindo à Stream Pro! 🎬', 'success', 'Olá!');
         }, 1000);
       });
 
-      // Fallback: se o evento load não disparar em 3 segundos, esconder o loader
       setTimeout(function() {
         if (!DOM.loader.classList.contains('hidden')) {
           DOM.loader.classList.add('hidden');
@@ -2696,120 +3153,6 @@
           DOM.header.classList.remove('scrolled');
         }
       }, 10));
-
-      // ===== MODAL =====
-      function openModal() {
-        DOM.modal.classList.add('active');
-        document.body.classList.add('no-scroll');
-      }
-
-      function closeModal() {
-        DOM.modal.classList.remove('active');
-        document.body.classList.remove('no-scroll');
-        DOM.testeForm.reset();
-        clearFormErrors();
-      }
-
-      function clearFormErrors() {
-        document.querySelectorAll('.form-group input').forEach(input => {
-          input.classList.remove('error');
-        });
-        document.querySelectorAll('.form-error').forEach(el => {
-          el.textContent = '';
-        });
-      }
-
-      DOM.openModalBtns.forEach(btn => {
-        btn.addEventListener('click', openModal);
-      });
-
-      DOM.closeModalBtn.addEventListener('click', closeModal);
-
-      window.addEventListener('click', (e) => {
-        if (e.target === DOM.modal) {
-          closeModal();
-        }
-      });
-
-      document.addEventListener('keydown', (e) => {
-        if (e.key === 'Escape' && DOM.modal.classList.contains('active')) {
-          closeModal();
-        }
-      });
-
-      // ===== FORMULÁRIO =====
-      const phoneInput = document.getElementById('whatsapp');
-      if (phoneInput) {
-        phoneInput.addEventListener('input', (e) => {
-          e.target.value = Utils.formatPhone(e.target.value);
-        });
-      }
-
-      DOM.testeForm.addEventListener('submit', (e) => {
-        e.preventDefault();
-
-        const nome = document.getElementById('nome');
-        const email = document.getElementById('email');
-        const whatsapp = document.getElementById('whatsapp');
-        
-        const nomeError = document.getElementById('nomeError');
-        const emailError = document.getElementById('emailError');
-        const whatsappError = document.getElementById('whatsappError');
-
-        let isValid = true;
-
-        // Reset errors
-        clearFormErrors();
-
-        // Validate nome
-        if (!nome.value.trim()) {
-          nome.classList.add('error');
-          nomeError.textContent = 'Nome é obrigatório';
-          isValid = false;
-        }
-
-        // Validate email
-        if (!email.value.trim()) {
-          email.classList.add('error');
-          emailError.textContent = 'E-mail é obrigatório';
-          isValid = false;
-        } else if (!Utils.validateEmail(email.value)) {
-          email.classList.add('error');
-          emailError.textContent = 'E-mail inválido';
-          isValid = false;
-        }
-
-        // Validate whatsapp
-        if (!whatsapp.value.trim()) {
-          whatsapp.classList.add('error');
-          whatsappError.textContent = 'WhatsApp é obrigatório';
-          isValid = false;
-        } else if (!Utils.validatePhone(whatsapp.value)) {
-          whatsapp.classList.add('error');
-          whatsappError.textContent = 'WhatsApp inválido';
-          isValid = false;
-        }
-
-        if (!isValid) return;
-
-        // Submit form
-        const submitBtn = document.getElementById('submitTeste');
-        const originalText = submitBtn.innerHTML;
-        submitBtn.innerHTML = '<i class="fas fa-spinner fa-spin"></i> Enviando...';
-        submitBtn.disabled = true;
-
-        setTimeout(() => {
-          closeModal();
-          Utils.showToast('Recebemos seus dados! Em breve entraremos em contato.', 'success');
-          
-          submitBtn.innerHTML = originalText;
-          submitBtn.disabled = false;
-          
-          // Enviar para o WhatsApp (opcional)
-          const message = `Olá! Me chamo ${nome.value}. Quero fazer um teste grátis! Meu email é ${email.value}`;
-          window.open(`https://wa.me/${CONFIG.whatsappNumber}?text=${encodeURIComponent(message)}`, '_blank');
-        }, 2000);
-      });
 
       // ===== TOAST =====
       DOM.toastClose.addEventListener('click', Utils.hideToast);
@@ -2910,61 +3253,6 @@
         updateCountdown();
       }
 
-      // ===== DOWNLOAD TABS =====
-      const downloadInfo = {
-        ibo: {
-          version: '4.2.1',
-          features: ['4K HDR', 'Multi-telas', 'EPG completo', 'Gravação', 'Chromecast'],
-          size: '32 MB'
-        },
-        xc: {
-          version: '3.8.5',
-          features: ['Full HD', 'Multi-telas', 'EPG básico', 'Player integrado', 'VPN'],
-          size: '28 MB'
-        }
-      };
-
-      DOM.downloadTabs.forEach(tab => {
-        tab.addEventListener('click', (e) => {
-          e.preventDefault();
-          
-          // Remove active class from all tabs
-          DOM.downloadTabs.forEach(t => t.classList.remove('active'));
-          
-          // Add active class to clicked tab
-          tab.classList.add('active');
-          
-          const apk = tab.getAttribute('data-apk');
-          const info = downloadInfo[apk];
-          
-          if (info && DOM.downloadInfo) {
-            DOM.downloadInfo.innerHTML = `
-              <div class="download-version">
-                <i class="fas fa-check-circle"></i> Versão ${info.version} - Tamanho: ${info.size}
-              </div>
-              
-              <div class="download-features">
-                ${info.features.map(f => `
-                  <span class="download-feature">
-                    <i class="fas fa-check"></i> ${f}
-                  </span>
-                `).join('')}
-              </div>
-              
-              <p style="margin-top: var(--spacing-6);">
-                <i class="fas fa-shield-alt" style="color: var(--success);"></i> 100% seguro - sem vírus
-              </p>
-              
-              <button class="btn btn-primary" style="margin-top: var(--spacing-4);" onclick="window.open('https://cbstore.top/${apk}mult.apk', '_blank')">
-                <i class="fas fa-download"></i> Baixar Agora
-              </button>
-            `;
-          }
-          
-          Utils.showToast(`Preparando download do ${apk.toUpperCase()} Player...`, 'info');
-        });
-      });
-
       // ===== CLICK NOS PLANOS =====
       DOM.planoCards.forEach(card => {
         card.addEventListener('click', (e) => {
@@ -3044,31 +3332,46 @@
         cardObserver.observe(card);
       });
 
-      // ===== DETECTAR BANDEIRA DO CARTÃO (DEMO) =====
-      const cartaoInput = document.getElementById('cartao');
-      if (cartaoInput) {
-        cartaoInput.addEventListener('input', (e) => {
-          const value = e.target.value.replace(/\D/g, '');
-          const bandeiraElement = document.getElementById('bandeira');
-          
-          if (bandeiraElement) {
-            if (value.startsWith('4')) {
-              bandeiraElement.innerHTML = '<i class="fab fa-cc-visa"></i> Visa';
-            } else if (value.startsWith('5')) {
-              bandeiraElement.innerHTML = '<i class="fab fa-cc-mastercard"></i> Mastercard';
-            } else if (value.startsWith('3')) {
-              bandeiraElement.innerHTML = '<i class="fab fa-cc-amex"></i> Amex';
-            } else if (value.startsWith('6')) {
-              bandeiraElement.innerHTML = '<i class="fab fa-cc-discover"></i> Discover';
-            } else {
-              bandeiraElement.innerHTML = '<i class="fas fa-credit-card"></i> Digite o número';
-            }
+      // ===== SELEÇÃO DE PLAYERS =====
+      DOM.playerCards.forEach(card => {
+        card.addEventListener('click', () => {
+          DOM.playerCards.forEach(c => c.classList.remove('selected'));
+          card.classList.add('selected');
+          const playerName = card.getAttribute('data-player');
+          DOM.selectedPlayer.value = playerName;
+          Utils.showToast(`Player ${playerName} selecionado`, 'info');
+        });
+      });
+
+      // ===== FORMATAÇÃO MAC ADDRESS =====
+      if (DOM.macAddress) {
+        DOM.macAddress.addEventListener('input', (e) => {
+          e.target.value = Utils.formatMAC(e.target.value);
+        });
+      }
+
+      // ===== ENVIO ATIVAÇÃO WHATSAPP =====
+      if (DOM.sendActivation) {
+        DOM.sendActivation.addEventListener('click', () => {
+          const player = DOM.selectedPlayer.value;
+          const mac = DOM.macAddress.value;
+          const device = DOM.deviceInfo.value;
+          const name = DOM.activationName.value;
+
+          if (!mac || !device) {
+            Utils.showToast('Preencha MAC e Dispositivo', 'warning', 'Campos obrigatórios');
+            return;
           }
+
+          const message = `*NOVA ATIVAÇÃO*\n\n👤 Nome: ${name || 'Não informado'}\n📱 Player: ${player}\n🔢 MAC: ${mac}\n📺 Dispositivo: ${device}\n\n⚠️ ATENÇÃO: Qualquer erro de digitação será necessário pagar outra ativação!`;
+          
+          window.open(`https://wa.me/${CONFIG.whatsappNumber}?text=${encodeURIComponent(message)}`, '_blank');
+          Utils.showToast('Pedido enviado para WhatsApp!', 'success');
         });
       }
 
       // ===== SCROLL REVEAL =====
-      const revealElements = document.querySelectorAll('.section-header, .testimonial-card, .plano-card, .stream-item');
+      const revealElements = document.querySelectorAll('.section-header, .testimonial-card, .plano-card, .stream-item, .work-card');
       
       const revealObserver = new IntersectionObserver((entries) => {
         entries.forEach(entry => {
@@ -3083,7 +3386,7 @@
         revealObserver.observe(el);
       });
 
-      // ===== DARK MODE TOGGLE (OPCIONAL) =====
+      // ===== DARK MODE TOGGLE =====
       const darkModeToggle = document.getElementById('darkModeToggle');
       if (darkModeToggle) {
         darkModeToggle.addEventListener('click', () => {
@@ -3110,315 +3413,13 @@
         });
       });
 
-      // ===== LAZY LOADING FOR IMAGES =====
-      const images = document.querySelectorAll('img[data-src]');
-      const imageObserver = new IntersectionObserver((entries) => {
-        entries.forEach(entry => {
-          if (entry.isIntersecting) {
-            const img = entry.target;
-            img.src = img.dataset.src;
-            img.classList.add('loaded');
-            imageObserver.unobserve(img);
-          }
-        });
-      });
-
-      images.forEach(img => imageObserver.observe(img));
-
-      // ===== ANIMAÇÃO DE DIGITAÇÃO NO HERO =====
-      const heroTitle = document.querySelector('.hero-content h2');
-      if (heroTitle) {
-        heroTitle.style.opacity = '0';
-        setTimeout(() => {
-          heroTitle.style.transition = 'opacity 1s ease';
-          heroTitle.style.opacity = '1';
-        }, 500);
-      }
-
-      // ===== PARALLAX EFFECT NO HERO =====
-      window.addEventListener('scroll', () => {
-        const scrolled = window.pageYOffset;
-        const heroImage = document.querySelector('.hero-image-wrapper');
-        if (heroImage) {
-          heroImage.style.transform = `translateY(${scrolled * 0.1}px)`;
-        }
-      });
-
-      // ===== TOOLTIP CUSTOMIZADO =====
-      const tooltipElements = document.querySelectorAll('[data-tooltip]');
-      tooltipElements.forEach(el => {
-        el.addEventListener('mouseenter', (e) => {
-          const tooltip = document.createElement('div');
-          tooltip.className = 'custom-tooltip';
-          tooltip.textContent = el.dataset.tooltip;
-          document.body.appendChild(tooltip);
-          
-          const rect = el.getBoundingClientRect();
-          tooltip.style.left = rect.left + (rect.width / 2) - (tooltip.offsetWidth / 2) + 'px';
-          tooltip.style.top = rect.top - tooltip.offsetHeight - 10 + 'px';
-          
-          el.addEventListener('mouseleave', () => {
-            tooltip.remove();
-          });
-        });
-      });
-
-      // ===== VALIDAÇÃO DE CPF (DEMO) =====
-      const cpfInput = document.getElementById('cpf');
-      if (cpfInput) {
-        cpfInput.addEventListener('input', (e) => {
-          let value = e.target.value.replace(/\D/g, '');
-          
-          if (value.length > 11) value = value.slice(0, 11);
-          
-          if (value.length > 9) {
-            value = value.replace(/(\d{3})(\d{3})(\d{3})(\d{2})/, '$1.$2.$3-$4');
-          } else if (value.length > 6) {
-            value = value.replace(/(\d{3})(\d{3})(\d{1,3})/, '$1.$2.$3');
-          } else if (value.length > 3) {
-            value = value.replace(/(\d{3})(\d{1,3})/, '$1.$2');
-          }
-          
-          e.target.value = value;
-        });
-      }
-
       // ===== COPYRIGHT DYNAMIC YEAR =====
       const yearElements = document.querySelectorAll('.current-year');
       yearElements.forEach(el => {
         el.textContent = new Date().getFullYear();
       });
 
-      // ===== SERVICE WORKER REGISTRATION (PWA) =====
-      if ('serviceWorker' in navigator) {
-        window.addEventListener('load', () => {
-          navigator.serviceWorker.register('/sw.js').catch(err => {
-            console.log('ServiceWorker registration failed: ', err);
-          });
-        });
-      }
-
-      // ===== ANALYTICS (DUMMY) =====
-      function trackEvent(category, action, label) {
-        console.log(`[Analytics] ${category} - ${action} - ${label}`);
-      }
-
-      // Track page view
-      trackEvent('Page', 'View', window.location.pathname);
-
-      // Track clicks on important elements
-      document.querySelectorAll('.btn-plano, .btn-primary, .download-tab').forEach(btn => {
-        btn.addEventListener('click', () => {
-          trackEvent('Button', 'Click', btn.textContent.trim());
-        });
-      });
-
-      // ===== DETECTAR CONEXÃO =====
-      if (navigator.connection) {
-        const connection = navigator.connection;
-        
-        if (connection.saveData) {
-          Utils.showToast('Modo economia de dados ativo', 'warning');
-        }
-        
-        connection.addEventListener('change', () => {
-          console.log('Conexão mudou:', connection.effectiveType);
-        });
-      }
-
-      // ===== PWA INSTALL PROMPT =====
-      let deferredPrompt;
-      window.addEventListener('beforeinstallprompt', (e) => {
-        e.preventDefault();
-        deferredPrompt = e;
-        
-        // Mostrar botão de instalação
-        const installBtn = document.getElementById('installApp');
-        if (installBtn) {
-          installBtn.style.display = 'flex';
-          
-          installBtn.addEventListener('click', async () => {
-            if (!deferredPrompt) return;
-            
-            deferredPrompt.prompt();
-            const { outcome } = await deferredPrompt.userChoice;
-            
-            if (outcome === 'accepted') {
-              Utils.showToast('Obrigado por instalar nosso app!', 'success');
-            }
-            
-            deferredPrompt = null;
-            installBtn.style.display = 'none';
-          });
-        }
-      });
-
-      // ===== OFFLINE DETECTION =====
-      window.addEventListener('online', () => {
-        Utils.showToast('Conexão restabelecida!', 'success');
-      });
-
-      window.addEventListener('offline', () => {
-        Utils.showToast('Você está offline. Alguns recursos podem não funcionar.', 'warning');
-      });
-
-      // ===== PERFORMANCE MARK =====
-      performance.mark('app-loaded');
-      console.log('Tempo de carregamento:', performance.now().toFixed(0), 'ms');
-
     })();
   </script>
-
-  <!-- BOTÃO DE INSTALAÇÃO PWA -->
-  <button id="installApp" style="position: fixed; bottom: 120px; right: 30px; background: var(--gradient-primary); color: white; border: none; border-radius: var(--radius-full); padding: 12px 24px; font-weight: 600; box-shadow: var(--shadow-lg); display: none; align-items: center; gap: 8px; z-index: 99; cursor: pointer;">
-    <i class="fas fa-download"></i> Instalar App
-  </button>
-
-  <!-- BOTÃO DARK MODE (OPCIONAL) -->
-  <button id="darkModeToggle" style="position: fixed; bottom: 120px; left: 30px; background: var(--secondary-900); color: white; border: none; border-radius: 50%; width: 50px; height: 50px; font-size: 1.2rem; box-shadow: var(--shadow-lg); display: flex; align-items: center; justify-content: center; z-index: 99; cursor: pointer;">
-    <i class="fas fa-moon"></i>
-  </button>
-
-  <style>
-    /* ===== DARK MODE ===== */
-    body.dark-mode {
-      background: var(--secondary-900);
-      color: var(--secondary-100);
-    }
-
-    body.dark-mode .header {
-      background: rgba(15, 23, 42, 0.8);
-      border-bottom-color: rgba(255,255,255,0.05);
-    }
-
-    body.dark-mode .logo-text h1 {
-      background: linear-gradient(135deg, white, var(--primary-300));
-      -webkit-background-clip: text;
-      -webkit-text-fill-color: transparent;
-    }
-
-    body.dark-mode .plano-card,
-    body.dark-mode .testimonials,
-    body.dark-mode .download-info,
-    body.dark-mode .stream-icons {
-      background: var(--secondary-800);
-      border-color: var(--secondary-700);
-    }
-
-    body.dark-mode .plano-card.popular {
-      background: linear-gradient(var(--secondary-800), var(--secondary-700));
-    }
-
-    body.dark-mode .testimonial-card {
-      background: var(--secondary-700);
-    }
-
-    body.dark-mode .footer {
-      background: var(--secondary-950);
-    }
-
-    /* ===== CUSTOM TOOLTIP ===== */
-    .custom-tooltip {
-      position: fixed;
-      background: var(--secondary-900);
-      color: white;
-      padding: 8px 12px;
-      border-radius: var(--radius-md);
-      font-size: 0.85rem;
-      z-index: 1000;
-      pointer-events: none;
-      box-shadow: var(--shadow-lg);
-    }
-
-    .custom-tooltip::after {
-      content: '';
-      position: absolute;
-      bottom: -5px;
-      left: 50%;
-      transform: translateX(-50%);
-      width: 0;
-      height: 0;
-      border-left: 5px solid transparent;
-      border-right: 5px solid transparent;
-      border-top: 5px solid var(--secondary-900);
-    }
-
-    /* ===== ANIMAÇÕES ADICIONAIS ===== */
-    .fade-in {
-      animation: fadeIn 0.8s ease forwards;
-    }
-
-    @keyframes fadeIn {
-      from {
-        opacity: 0;
-        transform: translateY(20px);
-      }
-      to {
-        opacity: 1;
-        transform: translateY(0);
-      }
-    }
-
-    /* ===== LOADING STATES ===== */
-    .loading-skeleton {
-      background: linear-gradient(90deg, var(--secondary-200) 25%, var(--secondary-300) 50%, var(--secondary-200) 75%);
-      background-size: 200% 100%;
-      animation: loading 1.5s infinite;
-    }
-
-    @keyframes loading {
-      0% { background-position: 200% 0; }
-      100% { background-position: -200% 0; }
-    }
-
-    /* ===== RESPONSIVIDADE EXTRA ===== */
-    @media (max-width: 768px) {
-      #installApp,
-      #darkModeToggle {
-        bottom: 100px;
-        width: 45px;
-        height: 45px;
-        font-size: 1rem;
-        padding: 0;
-      }
-      
-      #installApp {
-        width: auto;
-        padding: 10px 20px;
-        right: 20px;
-      }
-      
-      #darkModeToggle {
-        left: 20px;
-      }
-    }
-
-    @media (max-width: 480px) {
-      #installApp span {
-        display: none;
-      }
-      
-      #installApp {
-        width: 45px;
-        height: 45px;
-        padding: 0;
-        justify-content: center;
-      }
-      
-      #installApp i {
-        margin: 0;
-      }
-    }
-  </style>
 </body>
 </html>
-
-
-
-
-
-
-
-
-
-
